@@ -43,7 +43,7 @@ if st.button("Kirim Pesan") and user_message:
     else:
         try:
             genai.configure(api_key=gemini_api_key)
-            model = genai.GenerativeModel('gemini-2.0-flash')
+            model = genai.GenerativeModel('gemini-3.6-flash')
             
             prompt = f"{system_instruction}\n\nPengguna berkata: {user_message}\nBalasan singkat:"
             response = model.generate_content(prompt)
